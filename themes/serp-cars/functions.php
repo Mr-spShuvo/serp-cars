@@ -14,6 +14,19 @@ function scars_enqueue_scripts()
 }
 add_action('wp_enqueue_scripts', 'scars_enqueue_scripts');
 
+function scars_theme_features()
+{
+    $navmenu = array(
+        'header_menu' => __('Header Menu', 'scars'),
+        'footer_menu' => __('Footer Menu', 'scars'),
+    );
+    register_nav_menus($navmenu);
+    add_theme_support('title-tag');
+    add_theme_support('post-thumbnails');
+}
+add_action('after_setup_theme', 'scars_theme_features');
+
+
 // Custom Posts Per Page
 function scars_custom_posts_per_page($query)
 {
