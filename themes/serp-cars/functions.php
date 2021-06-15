@@ -33,7 +33,7 @@ function scars_custom_posts_per_page($query)
 {
     switch ($query->query_vars['post_type']) {
         case 'cars':
-            $query->query_vars['posts_per_page'] = 1;
+            $query->query_vars['posts_per_page'] = 6;
             break;
         default:
             break;

@@ -1,0 +1,22 @@
+.footer {
+  background: $color-main;
+  color: $color-bg;
+  padding: 6rem 0;
+  text-align: center;
+
+  img {
+    height: 8rem;
+  }
+
+  &__copyright {
+    width: 80%;
+    max-width: 48rem;
+    font-size: 1.3rem;
+    margin: 0 auto;
+    margin-top: 3rem;
+
+    a {
+      color: $color-teal;
+    }
+  }
+}

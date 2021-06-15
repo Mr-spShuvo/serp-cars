@@ -1,0 +1,24 @@
+.pagination-box,
+.pagination-box .pagination {
+  justify-content: center;
+}
+
+.pagination-box .page-numbers {
+  width: 4rem;
+  padding: 1.2rem;
+  font-size: 1.6rem;
+  border-radius: 0.5rem;
+  color: $color-bg;
+  background-color: $color-main;
+  font-weight: $font-medium;
+  margin-right: 10px;
+}
+
+.pagination-box .page-numbers:hover .pagination-box .pagination .page-numbers:hover {
+  background-color: $color-main;
+}
+
+.pagination-box .page-numbers.current,
+.pagination-box .pagination .page-numbers.current {
+  background-color: $color-tomato;
+}

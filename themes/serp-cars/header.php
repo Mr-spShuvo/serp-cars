@@ -27,7 +27,6 @@
                   SERP Cars
               </a>
               <nav class="header__nav">
-
                   <?php
                     wp_nav_menu(array(
                         'menu'           => 'Header Menu',

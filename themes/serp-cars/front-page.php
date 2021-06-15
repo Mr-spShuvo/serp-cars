@@ -1,4 +1,5 @@
 <?php get_header()  ?>
+
 <section class="hero">
     <div class="hero__content">
         <video class="hero__video" autoplay loop playsinline muted>

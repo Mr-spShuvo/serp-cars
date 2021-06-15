@@ -1,0 +1,21 @@
+.cars {
+  padding-bottom: 8rem;
+
+  .car {
+    img {
+      object-fit: cover;
+      object-position: center;
+      height: 24rem;
+    }
+
+    .card-title {
+      color: $color-main;
+      font-weight: $font-semi-bold;
+    }
+
+    .card-subtitle > span {
+      font-weight: $font-semi-bold;
+      color: $color-main;
+    }
+  }
+}
