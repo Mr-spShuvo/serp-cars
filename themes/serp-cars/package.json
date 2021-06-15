@@ -1,0 +1,17 @@
+{
+  "name": "serp-cars",
+  "version": "1.0.0",
+  "description": "Explore Country's Best Car Deals",
+  "main": "scripts/app.js",
+  "repository": "https://github.com/Mr-spShuvo/serp-cars",
+  "author": "Md. Shahriar Parvez",
+  "license": "MIT",
+  "scripts": {
+    "watch": "node-sass scss/ -o styles/ --source-map true --output-style expanded --indent-type tab --indent-width 1 -w",
+    "compile:css": "node-sass scss/ -o styles/"
+  },
+  "devDependencies": {
+    "node-sass": "^6.0.0",
+    "stylelint": "^13.13.1"
+  }
+}
