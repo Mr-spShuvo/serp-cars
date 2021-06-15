@@ -12,7 +12,7 @@
       color: $color-bg;
     }
 
-    #responsive-menu i {
+    #responsive-menu > i {
       color: $color-bg;
     }
   }
@@ -128,5 +128,9 @@
       cursor: pointer;
       font-size: 2.2rem;
     }
+  }
+
+  &--home #responsive-menu {
+    top: 4rem;
   }
 }

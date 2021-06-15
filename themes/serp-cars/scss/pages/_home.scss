@@ -1,0 +1,95 @@
+.hero {
+  &__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -999;
+  }
+
+  &__video {
+    position: absolute;
+    left: -150%;
+    width: auto;
+    height: 100%;
+    position: absolute;
+    transform-origin: center;
+    pointer-events: none;
+
+    @include media-queries(atSmall) {
+      left: -90%;
+    }
+
+    @include media-queries(atMedium) {
+      left: -60%;
+    }
+
+    @include media-queries(atMediumLarge) {
+      left: 0;
+    }
+
+    @include media-queries(atLarge) {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  #video-overlays {
+    position: absolute;
+    top: 0;
+    left: 0;
+    float: left;
+    width: 100%;
+    height: 100%;
+    background: rgba($color-main, 0.65);
+  }
+
+  .hero-box {
+    position: absolute;
+    z-index: 11;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: $color-bg;
+    width: 80%;
+
+    &__title {
+      line-height: 1.2;
+      font-size: 3.8rem;
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 2px;
+      margin-bottom: 5rem;
+      color: $color-bg;
+      text-shadow: -0.5rem 0.5rem 1rem #00000030;
+
+      @include media-queries(atMedium) {
+        font-size: 4.8rem;
+      }
+
+      @include media-queries(atMediumLarge) {
+        font-size: 5.2rem;
+      }
+
+      @include media-queries(atLarge) {
+        font-size: 6rem;
+      }
+
+      & > span {
+        display: block;
+      }
+    }
+
+    &__c2a {
+      padding: 1.5rem 4rem;
+      font-size: 1.6rem;
+
+      & > i {
+        margin-left: 2.5rem;
+      }
+    }
+  }
+}

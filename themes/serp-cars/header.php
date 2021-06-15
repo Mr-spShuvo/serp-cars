@@ -38,6 +38,6 @@
                     ));
                     ?>
               </nav>
-              <a class="header__c2a button button--main button--lg" href="#">Get Started</a>
+              <a class="header__c2a button button--main button--lg" href="<?php site_url('/cars') ?>">Get Started</a>
           </div>
       </header>

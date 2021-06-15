@@ -1,6 +1,6 @@
 .button {
   display: inline-flex;
-  align-items: stretch;
+  align-items: center;
   justify-content: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -48,8 +48,7 @@
   }
 
   & > i {
-    font-size: 1.6rem;
-    position: relative;
-    bottom: -0.2rem;
+    font-size: 1.4rem;
+    margin-left: 1rem;
   }
 }
