@@ -486,6 +486,11 @@ a {
 	padding-bottom: 8rem;
 }
 
+.cars .car {
+	min-height: auto;
+	height: auto;
+}
+
 .cars .car img {
 	object-fit: cover;
 	object-position: center;

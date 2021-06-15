@@ -54,10 +54,6 @@
         </div>
 
 
-
-
-
-
     <?php endwhile;
     wp_reset_query(); ?>
 </main>
