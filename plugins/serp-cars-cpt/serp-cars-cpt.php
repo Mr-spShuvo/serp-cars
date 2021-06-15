@@ -78,7 +78,7 @@ function scars_register_cpts()
     "query_var" => true,
     "menu_position" => 6,
     "menu_icon" => "dashicons-car",
-    "supports" => ["title", "editor", "thumbnail", "custom-fields"],
+    "supports" => ["title", "thumbnail", "custom-fields"],
     "taxonomies" => ["brands"],
     "show_in_graphql" => false,
   ];
