@@ -1,0 +1,112 @@
+.car {
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  &__details {
+    flex-basis: 100%;
+    order: 2;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    text-align: center;
+    @include media-queries(atMediumLarge) {
+      flex-basis: 50%;
+      padding-top: 7rem;
+      padding-left: 7rem;
+      text-align: left;
+    }
+  }
+
+  &__gallery {
+    background: #f0f0f0;
+    width: 100%;
+    padding: 5rem 3rem;
+    order: 1;
+
+    @include media-queries(atMediumLarge) {
+      width: 50%;
+      order: 3;
+      padding: 10rem 3rem;
+    }
+  }
+
+  &__title {
+    font-size: 3.2rem;
+    font-weight: $font-bold;
+
+    @include media-queries(atMediumLarge) {
+      padding-top: 5rem;
+    }
+  }
+
+  &__meta {
+    padding-top: 1rem;
+    font-size: 2rem;
+
+    span {
+      font-weight: $font-semi-bold;
+      color: $color-tomato;
+    }
+  }
+
+  &__info {
+    margin-top: 2.5rem;
+    font-size: 1.4rem;
+    // Hacks
+    #bannerR {
+      display: none;
+    }
+  }
+
+  &__price {
+    margin: 3rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    span {
+      color: $color-main;
+      line-height: 0;
+      margin-left: 1rem;
+      font-size: 3.6rem;
+      font-weight: $font-semi-bold;
+    }
+
+    @include media-queries(atMediumLarge) {
+      justify-content: flex-start;
+    }
+  }
+}
+
+#splide-gallery {
+  .splide__pagination {
+    bottom: -3rem;
+
+    &__page.is-active {
+      background: $color-tomato;
+    }
+  }
+  .thumbnails {
+    &__list {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: baseline;
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    &__item {
+      opacity: 0.5;
+      &.is-active {
+        opacity: 1;
+        border: 2px solid $color-teal;
+      }
+      img {
+        width: 8rem;
+        height: 8rem;
+      }
+    }
+  }
+}

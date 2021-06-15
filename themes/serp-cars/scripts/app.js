@@ -14,4 +14,52 @@ responsiveButton.addEventListener('click', () => {
   isResponsiveMenuActive = !isResponsiveMenuActive;
 });
 
-console.log('d');
+document.addEventListener('DOMContentLoaded', function () {
+  var splide = new Splide('#splide-gallery', {
+    cover: true,
+    height: '50vh',
+    type: 'loop'
+  });
+
+  var images = document.querySelectorAll('.js-thumbnails li');
+
+  var activeImage;
+  var activeClass = 'is-active';
+
+  for (let i = 0, len = images.length; i < len; i++) {
+    var image = images[i];
+
+    splide.on(
+      'click',
+      function () {
+        if (activeImage !== image) {
+          splide.go(i);
+        }
+      },
+      image
+    );
+  }
+
+  splide.on('mounted move', function (newIndex) {
+    // newIndex will be undefined through the "mounted" event.
+    var image = images[newIndex !== undefined ? newIndex : splide.index];
+
+    if (image && activeImage !== image) {
+      if (activeImage) {
+        activeImage.classList.remove(activeClass);
+      }
+
+      image.classList.add(activeClass);
+      activeImage = image;
+    }
+  });
+
+  splide.mount();
+});
+
+// document.addEventListener('DOMContentLoaded', function () {
+//   new Splide('#image-slider', {
+//     cover: true,
+//     heightRatio: 0.5
+//   }).mount();
+// });
