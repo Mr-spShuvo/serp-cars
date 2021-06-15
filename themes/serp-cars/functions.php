@@ -13,3 +13,20 @@ function scars_enqueue_scripts()
     wp_enqueue_script('scars-js', get_template_directory_uri() . '/scripts/app.js', array('jquery', 'scars-bootstrap'), '1.0.1', true);
 }
 add_action('wp_enqueue_scripts', 'scars_enqueue_scripts');
+
+// Custom Posts Per Page
+function scars_custom_posts_per_page($query)
+{
+    switch ($query->query_vars['post_type']) {
+        case 'cars':
+            $query->query_vars['posts_per_page'] = 1;
+            break;
+        default:
+            break;
+    }
+    return $query;
+}
+
+if (!is_admin()) {
+    add_filter('pre_get_posts', 'scars_custom_posts_per_page');
+}
