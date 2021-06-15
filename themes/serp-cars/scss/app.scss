@@ -1,12 +1,13 @@
-@import url(modules/_variable.scss);
-@import url(modules/_base.scss);
-@import url(modules/_mixins.scss);
-@import url(modules/_utilities.scss);
-@import url(modules/_card.scss);
-@import url(modules/_btn.scss);
-@import url(modules/_header.scss);
-@import url(modules/_footer.scss);
+@import 'modules/variable';
+@import 'modules/mixins';
+@import 'modules/base';
+@import 'modules/utilities';
+@import 'modules/animation';
+@import 'modules/card';
+@import 'modules/button';
+@import 'modules/header';
+@import 'modules/footer';
 
-@import url(pages/_home.scss);
-@import url(pages/_cars.scss);
-@import url(pages/_car.scss);
+@import 'pages/home';
+@import 'pages/cars';
+@import 'pages/car';

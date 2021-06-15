@@ -26,7 +26,13 @@ html {
 }
 
 body {
+  color: $color-text;
   line-height: 1.6;
   font-weight: $font-regular;
   font-size: 1.45rem;
+  background-color: $color-bg;
+}
+
+a {
+  text-decoration: none;
 }

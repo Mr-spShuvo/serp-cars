@@ -1,0 +1,132 @@
+.header {
+  padding: 1rem;
+  background-color: $color-white;
+  position: sticky;
+  top: 0;
+
+  &--home {
+    background-color: transparent;
+    padding: 3rem;
+
+    .menu > .menu-item > a {
+      color: $color-bg;
+    }
+
+    #responsive-menu i {
+      color: $color-bg;
+    }
+  }
+
+  & > .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    font-size: 0;
+    img {
+      height: 5rem;
+    }
+  }
+
+  &__nav {
+    & > div {
+      &.show-menu {
+        opacity: 1;
+        pointer-events: all;
+        animation: anim-from-left 0.5s ease-in-out;
+
+        .menu-item > a {
+          color: $color-main;
+        }
+      }
+
+      opacity: 0;
+      pointer-events: none;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      background-color: $color-bg;
+      left: 0;
+      right: 0;
+
+      @include media-queries(atMediumLarge) {
+        opacity: 1;
+        pointer-events: all;
+        position: relative;
+        background-color: transparent;
+      }
+    }
+
+    .menu {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      height: 100%;
+      padding-top: 15vh;
+
+      @include media-queries(atMediumLarge) {
+        padding-top: 0;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+
+    .menu-item {
+      margin: 2rem 0;
+      width: 40%;
+
+      @include media-queries(atMediumLarge) {
+        margin: 0 2rem;
+      }
+
+      & > a {
+        color: $color-main;
+        border-bottom: 2px solid $color-teal;
+        font-weight: $font-bold;
+        font-size: 2.5rem;
+        padding-bottom: 0.5rem;
+
+        @include media-queries(atMediumLarge) {
+          font-weight: $font-medium;
+          color: $color-text;
+          border-bottom: none;
+          font-size: 1.45rem;
+          padding-bottom: 0;
+          transition: all 0.3s ease-in-out;
+
+          &:hover {
+            border-bottom: 2px solid $color-teal;
+          }
+        }
+      }
+    }
+  }
+
+  .header__c2a {
+    display: none;
+
+    @include media-queries(atMediumLarge) {
+      display: block;
+    }
+  }
+
+  #responsive-menu {
+    position: fixed;
+    z-index: 999;
+    top: 2.3rem;
+    right: 12.5%;
+    color: $color-main;
+
+    @include media-queries(atMediumLarge) {
+      display: none;
+    }
+
+    & > i {
+      cursor: pointer;
+      font-size: 2.2rem;
+    }
+  }
+}

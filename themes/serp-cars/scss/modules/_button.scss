@@ -1,0 +1,55 @@
+.button {
+  display: inline-flex;
+  align-items: stretch;
+  justify-content: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: $font-medium;
+  letter-spacing: 1px;
+  padding: 1.2rem 4rem;
+  box-shadow: -3px 3px 1rem 1px rgba($color-main, 0.1);
+  transition: all 0.3s;
+  cursor: pointer;
+  backface-visibility: hidden;
+  border-radius: 5rem;
+
+  @include media-queries(atMediumLarge) {
+    font-size: 1.3rem;
+  }
+
+  &--main {
+    color: $color-white;
+    background-color: $color-main;
+  }
+
+  &--tomato {
+    color: $color-white;
+    background-color: $color-tomato;
+  }
+
+  &--teal {
+    color: $color-bg;
+    background-color: $color-teal;
+  }
+
+  &--lg {
+    padding: 1.5 4.5rem;
+  }
+
+  &:hover {
+    color: $color-bg;
+    transform: translateY(-3px);
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: -3px 1px 1rem rgba($color-main, 0.3);
+  }
+
+  & > i {
+    font-size: 1.6rem;
+    position: relative;
+    bottom: -0.2rem;
+  }
+}

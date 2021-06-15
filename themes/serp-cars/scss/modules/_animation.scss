@@ -1,0 +1,13 @@
+@keyframes anim-from-left {
+  0% {
+    transform: translateX(-50%) scale(2);
+  }
+
+  80% {
+    transform: translateX(5%);
+  }
+
+  100% {
+    transform: translateX(0%) scale(1);
+  }
+}

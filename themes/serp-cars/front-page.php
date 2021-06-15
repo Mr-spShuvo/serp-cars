@@ -1,19 +1,9 @@
 <?php get_header()  ?>
-<h1>Serp Cars</h1>
-<nav>
-    <?php
-    wp_nav_menu(array(
-        'menu'           => 'Header Menu',
-        'theme_location' => 'header_menu',
-        'fallback_cb'    => false
-    ));
-    ?>
-</nav>
 <section class="hero">
     <div class="hero-content">
         <video class="hero-vid" autoplay loop playsinline muted>
-            <source src="<?php echo get_template_directory_uri() . '/assets/hero-bg.mp4'; ?>" type="video/mp4">
-            <img src="<?php echo get_template_directory_uri() . '/assets/fallback-webp'; ?>" title="Your browser does not support the video.">
+            <source src="<?php echo get_template_directory_uri() . '/assets/videos/hero-bg.mp4'; ?>" type="video/mp4">
+            <img src="<?php echo get_template_directory_uri() . '/assets/videos/fallback-webp'; ?>" title="Your browser does not support the video.">
         </video>
         <div id="video-overlays"></div>
         <div class="hero-box">
