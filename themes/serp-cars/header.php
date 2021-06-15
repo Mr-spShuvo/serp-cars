@@ -27,9 +27,7 @@
                   SERP Cars
               </a>
               <nav class="header__nav">
-                  <span id="responsive-menu">
-                      <i class="im im-menu"></i>
-                  </span>
+
                   <?php
                     wp_nav_menu(array(
                         'menu'           => 'Header Menu',
@@ -37,6 +35,9 @@
                         'fallback_cb'    => false
                     ));
                     ?>
+                  <span id="responsive-menu">
+                      <i class="im im-menu"></i>
+                  </span>
               </nav>
               <a class="header__c2a button button--main button--lg" href="<?php site_url('/cars') ?>">Get Started</a>
           </div>

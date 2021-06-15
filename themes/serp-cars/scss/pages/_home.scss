@@ -30,9 +30,17 @@
       left: 0;
     }
 
-    @include media-queries(atLarge) {
+    @include media-queries(atLarger) {
+      width: 100%;
+    }
+
+    @include media-queries(1600px) {
       width: 100%;
       height: auto;
+    }
+
+    @include media-queries(atLarger) {
+      width: 100%;
     }
   }
 

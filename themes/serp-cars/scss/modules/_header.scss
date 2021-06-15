@@ -11,9 +11,12 @@
     .menu > .menu-item > a {
       color: $color-bg;
     }
+    .show-menu .menu > .menu-item > a {
+      border-bottom: 2px solid $color-tomato;
+    }
 
     #responsive-menu > i {
-      color: $color-bg;
+      color: $color-teal;
     }
   }
 
@@ -102,6 +105,12 @@
           }
         }
       }
+    }
+
+    .current-menu-item > a,
+    .current-page-ancestor > a,
+    .current-post-ancestor > a {
+      border-bottom: 2px solid $color-teal;
     }
   }
 

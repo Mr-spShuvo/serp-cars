@@ -27,6 +27,7 @@ function scars_theme_features()
 add_action('after_setup_theme', 'scars_theme_features');
 
 
+/** Overriding Default Behaviors */
 // Custom Posts Per Page
 function scars_custom_posts_per_page($query)
 {
@@ -43,3 +44,14 @@ function scars_custom_posts_per_page($query)
 if (!is_admin()) {
     add_filter('pre_get_posts', 'scars_custom_posts_per_page');
 }
+
+// Adding `current-menu-item` to cars
+function scars_add_nav_menu_classes($classes, $item)
+{
+    if (is_post_type_archive('cars') && ($item->title == "Cars")) {
+        $classes[] = 'current-menu-item';
+    }
+    return $classes;
+}
+
+add_filter('nav_menu_css_class', 'scars_add_nav_menu_classes', 10, 2);
